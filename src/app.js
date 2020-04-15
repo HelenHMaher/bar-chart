@@ -1,2 +1,5 @@
-var nums = [1, 2, 3];
-var doubleNums = nums.map((e) => e * 2);
+const svg = d3
+  .select(".visHolder")
+  .append("svg")
+  .attr("width", 100)
+  .attr("height", 60);

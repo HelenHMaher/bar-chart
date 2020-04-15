@@ -1,0 +1,26 @@
+{
+  "name": "bar-chart",
+  "version": "1.0.0",
+  "description": "FCC bar-chart project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelenHMaher/bar-chart.git"
+  },
+  "keywords": [
+    "bar-chart"
+  ],
+  "author": "Helen Maher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HelenHMaher/bar-chart/issues"
+  },
+  "homepage": "https://github.com/HelenHMaher/bar-chart#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}

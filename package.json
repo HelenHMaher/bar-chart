@@ -2,10 +2,10 @@
   "name": "bar-chart",
   "version": "1.0.0",
   "description": "FCC bar-chart project",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d docs"
+    "build": "babel src -d dist"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,5 @@
     "url": "https://github.com/HelenHMaher/bar-chart/issues"
   },
   "homepage": "https://github.com/HelenHMaher/bar-chart#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0"
-  }
+  "devDependencies": {}
 }

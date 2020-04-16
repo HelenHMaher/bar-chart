@@ -9,6 +9,8 @@ const svgContainer = d3
   .attr("width", width + inPadding + outPadding)
   .attr("height", height + inPadding + outPadding);
 
+const tooltip = d3.select(".visHolder").append("div").attr("id", "tooltip");
+
 fetch(
   "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json"
 )
@@ -36,15 +38,21 @@ fetch(
       .enter()
       .append("rect")
       .attr("class", "bar")
-      .attr("data-date", (d, i) => dataset.data[i][0])
-      .attr("data-gdp", (d, i) => dataset.data[i][1])
+      .attr("data-date", (d, i) => d[0])
+      .attr("data-gdp", (d, i) => d[1])
       .attr("x", (d, i) => xScale(toDate[i]) + inPadding)
       .attr("y", (d, i) => height + outPadding - yScale(d[1]))
       .attr("width", barWidth)
       .attr("height", (d, i) => yScale(d[1]))
-      .append("title")
-      .attr("id", "tooltip")
-      .html((d) => dataset.data[0] + " $" + dataset.data[1] + " Billion");
+      .on("mouseover", (d, i) => {
+        tooltip
+          .html(d[0] + " $" + d[1] + " Billion")
+          .attr("data-date", d[0])
+          .style("display", "block");
+      })
+      .on("mouseout", (d, i) => {
+        tooltip.style("display", "none");
+      });
 
     const yAxisScale = d3.axisLeft(
       d3

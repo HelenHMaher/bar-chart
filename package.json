@@ -2,7 +2,7 @@
   "name": "bar-chart",
   "version": "1.0.0",
   "description": "FCC bar-chart project",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,6 @@
   "bugs": {
     "url": "https://github.com/HelenHMaher/bar-chart/issues"
   },
-  "homepage": "https://github.com/HelenHMaher/bar-chart#readme",
+  "homepage": "https://helenhmaher.github.io/bar-chart/",
   "devDependencies": {}
 }

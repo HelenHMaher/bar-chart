@@ -1,7 +1,12 @@
-body {
-  background: pink;
+:root {
+  --darkGrey: #727177;
+  --blueGrey: #aeb6c6;
+  --lightGrey: #cccbd0;
+  --darkGreen: #737f75;
+  --brightGreen: #99bb0d;
+  --darkBrown: #583c2c;
 }
 
 svg {
-  background-color: blue;
+  background-color: var(--lightGrey);
 }

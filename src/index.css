@@ -10,3 +10,11 @@
 svg {
   background-color: var(--lightGrey);
 }
+
+.bar {
+  fill: var(--darkGreen);
+}
+
+.bar:hover {
+  fill: var(--brightGreen);
+}

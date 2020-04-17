@@ -1,20 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
 :root {
-  --darkGrey: #727177;
-  --blueGrey: #aeb6c6;
-  --lightGrey: #cccbd0;
-  --darkGreen: #737f75;
-  --brightGreen: #99bb0d;
-  --darkBrown: #583c2c;
+  --darkMain: #1c686a;
+  --lightMain: #faf9ed;
+  --darkAccent: #b9452e;
+  --lightAccent: #61c6af;
+  --gold: #e5873c;
 }
 
-svg {
-  background-color: var(--lightGrey);
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  background: var(--lightMain);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 950px;
+  height: 700px;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px;
+}
+
+#tooltip {
+  background: green;
+  display: flex;
+  position: absolute;
+  top: 300px;
+  left: 350px;
 }
 
 .bar {
-  fill: var(--darkGreen);
+  fill: var(--darkMain);
 }
 
 .bar:hover {
-  fill: var(--brightGreen);
+  fill: var(--lightAccent);
+}
+
+.title {
+  font-size: 40px;
+  padding-top: 20px;
+  width: 100%;
 }

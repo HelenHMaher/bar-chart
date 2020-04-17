@@ -46,12 +46,12 @@ fetch(
       .attr("height", (d, i) => yScale(d[1]))
       .on("mouseover", (d, i) => {
         tooltip
-          .html(d[0] + " $" + d[1] + " Billion")
+          .html(d[0] + "<br>" + " $" + d[1] + " Billion")
           .attr("data-date", d[0])
-          .style("display", "block");
+          .style("opacity", 0.7);
       })
       .on("mouseout", (d, i) => {
-        tooltip.style("display", "none");
+        tooltip.style("opacity", 0);
       });
 
     const yAxisScale = d3.axisLeft(

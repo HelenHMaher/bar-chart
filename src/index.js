@@ -48,6 +48,8 @@ fetch(
         tooltip
           .html(d[0] + "<br>" + " $" + d[1] + " Billion")
           .attr("data-date", d[0])
+          .style("left", barWidth * i + i * 0.5 + 200 + "px")
+          .style("top", height - 100 + "px")
           .style("opacity", 0.7);
       })
       .on("mouseout", (d, i) => {

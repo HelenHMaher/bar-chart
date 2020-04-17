@@ -23,7 +23,14 @@ fetch(
 
     const toDate = dataset.data.map((d) => new Date(d[0]));
 
-    console.log(toDate);
+    svgContainer
+      .append("text")
+      .text("Gross Domestic Product")
+      .attr("transform", "rotate(90 100 80)")
+      .attr("x", 100)
+      .attr("y", 80)
+      .style("font-weight", "lighter")
+      .style("font-size", "20px");
 
     const xScale = d3
       .scaleTime()
@@ -32,7 +39,7 @@ fetch(
 
     const barWidth = (width - toDate.length * 0.5) / toDate.length;
 
-    const barElement = svgContainer
+    svgContainer
       .selectAll("rect")
       .data(dataset.data)
       .enter()

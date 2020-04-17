@@ -38,6 +38,7 @@ html {
   align-items: center;
   text-align: center;
   background: var(--lightMain);
+  opacity: 0;
 }
 
 .bar {
